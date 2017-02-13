@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/reply"
+        android:layout_alignBottom="@+id/user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="回复了bbb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:text="回复了bbb" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/user_info"
-        android:layout_toLeftOf="@id/reply"
-        android:gravity="left"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/reply"
+        android:layoutDirection="rtl">
+
         <TextView
-            android:id="@+id/list_item_tv"
+            android:id="@+id/master_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:paddingRight="4dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text="特别长的情况下会anfiadfadfadfadfadfafadfafasdfadfafasd"
-            android:layout_toLeftOf="@+id/star_icon"
-            android:textSize="16dp"/>
+            android:layout_marginRight="4dp"
+            android:maxHeight="15dp"
+            android:maxWidth="60dp"
+            android:text="【master】" />
 
         <TextView
             android:id="@+id/star_icon"
@@ -35,24 +37,26 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="4dp"
-            android:text="【lv】"
             android:layout_toLeftOf="@+id/master_icon"
             android:maxHeight="15dp"
-            android:maxWidth="42dp"/>
+            android:maxWidth="42dp"
+            android:text="【lv】" />
+
 
         <TextView
-            android:id="@+id/master_icon"
-            android:text="【master】"
-            android:visibility="invisible"
+            android:id="@+id/list_item_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginRight="4dp"
-            android:layout_alignParentRight="true"
-            android:maxHeight="15dp"
-            android:maxWidth="60dp"/>
+            android:layout_toLeftOf="@+id/star_icon"
+            android:ellipsize="end"
+            android:paddingRight="4dp"
+            android:singleLine="true"
+            android:text="特别长的情况下会anfiadfadfadfadfadfafadfafasdfadfafasd"
+            android:textSize="16dp" />
 
-    </RelativeLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
