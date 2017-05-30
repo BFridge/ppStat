@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fridge.com.hilistview.welcome.WelComeActivityFragment"
+    tools:showIn="@layout/activity_wel_come">
+
+    <Button
+        android:id="@+id/scroller_test_activity"
+        android:text="Scroller"
+        android:onClick="toScroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/listview_activity"
+        android:text="ListView"
+        android:onClick="toListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/viewpager_activity"
+        android:text="ViewPager"
+        android:onClick="toViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>
+
